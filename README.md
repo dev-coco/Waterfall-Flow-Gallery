@@ -9,9 +9,9 @@ Automatically adjust the appropriate layout according to the size of the images,
 # Setup & 设置
 ```
 <div class="block" >
-    <img class="yall_lazy" src="Input preview image link">
+    <img class="yall_lazy" data-src="Input preview image link">
     <button onclick="window.open('Input image download link')">下载</button>
     <p class="text" data-clipboard-text="Input copy text">Input show text</p>
 </div>
 ```
-The first image needs to use src, and the remaining images can use data-src.
+

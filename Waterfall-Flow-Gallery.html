@@ -82,123 +82,130 @@
       </script>
       <style>
          body {
-         background-color: #c0d2e0;
-         margin: 0;
+             background-color: #c0d2e0;
+             margin: 0;
          }
          body #wrapper:hover #sidebar-menu:hover {
-         margin-left: 0;
+             margin-left: 0;
+         }
+
+         #sidebar-menu {
+             border-right: 1px solid #dee2e6 !important;
          }
          #sidebar-menu {
-         border-right: 1px solid #dee2e6 !important;
+             min-height: 100vh;
+             margin-left: -16.6rem;
+             transition: margin 0.25s ease-out;
+             background-color: #D0E1F9;
+             position: fixed;
          }
-         #sidebar-menu {
-         min-height: 100vh;
-         margin-left: -16.6rem;
-         transition: margin 0.25s ease-out;
-         background-color: #D0E1F9;
-         position: fixed;
-         }
+
          .control {
-         margin-right: 1rem;
-         width: 30px;
-         height: 30px;
-         background: #4D648D;
+             margin-right: 1rem;
+             width: 30px;
+             height: 30px;
+             background: #4D648D;
          }
          .control:hover {
-         background: #D0E1F9;
-         color: #1E1F26;
+             background: #D0E1F9;
+             color: #1E1F26;
          }
+
          .menu-title {
-         background-color: #4D648D !important;
-         color: white;
-         padding: 0.875rem 1.25rem;
-         font-size: 1.2rem;
-         text-align: center;
+             background-color: #4D648D !important;
+             color: white;
+             padding: 0.875rem 1.25rem;
+             font-size: 1.2rem;
+             text-align: center;
          }
          .menu-list {
-         display: flex;
-         flex-direction: column;
-         padding-left: 0;
-         margin-bottom: 0;
-         border-radius: 0.25rem;
-         width: 16.5rem;
+             display: flex;
+             flex-direction: column;
+             padding-left: 0;
+             margin-bottom: 0;
+             border-radius: 0.25rem;
+             width: 16.5rem;
          }
          .menu-item {
-         position: relative;
-         display: block;
-         padding: 0.5rem 1rem;
-         color: #212529;
-         text-decoration: none;
-         background: #e0ebf9;
-         border: 1px solid rgba(0, 0, 0, 0.125);
+             position: relative;
+             display: block;
+             padding: 0.5rem 1rem;
+             color: #212529;
+             text-decoration: none;
+             background: #e0ebf9;
+             border: 1px solid rgba(0, 0, 0, 0.125);
          }
          .menu-item:hover {
-         background: rgba(77, 100, 141, 0.125);
+             background: rgba(77, 100, 141, 0.125);
          }
          .menu {
-         margin-left: 16.5rem;
-         position: absolute;
-         width: auto;
-         display: block;
-         background: #4D648D;
+             margin-left: 16.5rem;
+             position: absolute;
+             width: auto;
+             display: block;
+             background: #4D648D;
          }
+
          .grid-container {
-         column-gap: 1.5rem;
-         width: 90%;
-         margin: 0 auto;
+             column-gap: 1.5rem;
+             width: 90%;
+             margin: 0 auto;
          }
          .grid-container div div {
-         width: 150px;
-         margin: 0 1.5rem 1.5rem 0;
-         display: inline-block;
-         width: 100%;
-         border: solid 2px #40759b;
-         padding: 5px;
-         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-         border-radius: 5px;
+             width: 150px;
+             margin: 0 1.5rem 1.5rem 0;
+             display: inline-block;
+             width: 100%;
+             border: solid 2px #40759b;
+             padding: 5px;
+             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+             border-radius: 5px;
          }
          .grid-container div div img {
-         width: 100%;
-         border-radius: 5px;
-         transition: all 0.25s ease-in-out;
+             width: 100%;
+             border-radius: 5px;
+             transition: all 0.25s ease-in-out;
          }
          .grid-container div div p {
-         margin: 0px 0;
-         padding: 0;
+             margin: 0px 0;
+             padding: 0;
          }
+
          .block {
-         background: #d8e2eb;
+             background: #d8e2eb;
          }
          .medium-zoom-image--opened {
-         border-radius: 5px;
+             border-radius: 5px;
          }
          #scrollup {
-         width: 3rem;
-         height: 3rem;
-         position: fixed;
-         bottom: 2rem;
-         right: 0.5rem;
-         z-index: 9999;
-         color: #283655;
+             width: 3rem;
+             height: 3rem;
+             position: fixed;
+             bottom: 2rem;
+             right: 0.5rem;
+             z-index: 9999;
+             color: #283655;
          }
+
          button {
-         text-align: center;
-         width: 100%;
-         margin-bottom: 5px;
-         margin-top: 5px;
-         font-size: 16px;
-         background: #2caeb2;
+             text-align: center;
+             width: 100%;
+             margin-bottom: 5px;
+             margin-top: 5px;
+             font-size: 16px;
+             background: #2caeb2;
          }
          button:hover {
-         background-color: #07575B;
+             background-color: #07575B;
          }
+
          .menu,
          .control,
          button {
-         border: 1px solid #07575B;
-         color: white;
-         border-radius: 5px;
-         padding: .3rem .75rem;
+             border: 1px solid #07575B;
+             color: white;
+             border-radius: 5px;
+             padding: .3rem .75rem;
          }
       </style>
    </head>
@@ -219,8 +226,8 @@
          </div>
       </div>
       <a onclick="scrollup()" id="scrollup">
-         <svg viewBox="0 0 16 16" class="bi bi-arrow-up-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+         <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
          </svg>
       </a>
       <div style="text-align:right;">
